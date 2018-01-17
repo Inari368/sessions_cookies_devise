@@ -1,19 +1,17 @@
 class UsersController < ApplicationController
   # http_basic_authenticate_with name: "admin", password: "1234", only: :new
-  USERS = { 
-    "nelson" => "nelson",
-    'pedro' => 'pedro'
-  }
+  # USERS = { 
+  #   "nelson" => "nelson",
+  #   'pedro' => 'pedro'
+  # }
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate, only: :new
-  skip_before_action :set_user, only: [:show]
+  # before_action :authenticate, only: :new
+  # skip_before_action :set_user, only: [:show]
 
   # GET /users
   # GET /users.json
   def index
    @users  = User.all
-    session[:message] = 'Has entrado en el index'
-    flash[:notice] = 'Bienvenido'
   end
 
   # GET /users/1
