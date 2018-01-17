@@ -1,7 +1,0 @@
-<p id="notice"><%= notice %></p>
-<h1>New User</h1>
-previous user name : <%=  cookies[:user_name] ? cookies[:user_name] : 'none' %>
-
-<%= render 'form', user: @user %>
-
-<%= link_to 'Back', users_path %>
